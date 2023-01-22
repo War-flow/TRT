@@ -1,9 +1,9 @@
   <?php
   //Id connexion base de données
-  $hostname = 'uyu7j8yohcwo35j3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
-  $database = 'mahjmmdwa6sj72o9';
-  $username = 'yy4kgsc6x14bh9ue';
-  $password = 'a72u1xtlwrjxp3aw';
+  $hostname = 'localhost';
+  $database = 'db_trt';
+  $username = 'root';
+  $password = '';
 
   //Tentative de connexion base de données
   try {

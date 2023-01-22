@@ -29,4 +29,5 @@ if (isset($_SESSION['email'])) {
 
 <head>
   <title>Missions Spy K</title>
+  <h1>YO je suis une chaise</h1>
 </head>
