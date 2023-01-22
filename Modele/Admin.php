@@ -2,24 +2,9 @@
 
 class Admin
 {
-  public string $firstname;
-  public string $lastname;
-  public string $email;
-  public string $password;
-  public string $creationDate;
-
-  public function getFirstname(): string
-
-  {
-      return $this->firstname;
-  }
-
-
-  public function getLastname(): string
-
-  {
-      return $this->lastname;
-  }
+  private string $email;
+  private string $password;
+  private string $role;
 
   public function getEmail(): string
 
@@ -31,10 +16,11 @@ class Admin
   {
       return $this->password;
   }
-  public function getCreationDate(): string
+
+  public function getRole(): string
 
   {
-      return $this->creationDate;
+      return $this->role;
   }
 
 }
