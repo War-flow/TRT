@@ -6,10 +6,11 @@ class Annonce
     private string $title;
     private string $adresse;
     private string $description;
-    private string $time;
+    private string $start;
+    private string $end;
     private string $salary;
     private string $contract;
-    public string $cv;
+    private string $cv;
 
     public function getId(): string
 
@@ -34,11 +35,18 @@ class Annonce
         return $this->description;
     }
 
-    public function getTime(): string
+    public function getStart(): string
 
     {
-        return $this->time;
+        return $this->start;
     }
+
+    public function getEnd(): string
+
+    {
+        return $this->end;
+    }
+
     public function getSalary(): string
 
     {
@@ -49,7 +57,6 @@ class Annonce
     {
         return $this->contract;
     }
-
     public function getCv(): string
 
     {
