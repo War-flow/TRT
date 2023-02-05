@@ -48,10 +48,10 @@
       )') !== false) {
 
             //Création table Admin si inexitant
-            if ($pdo->exec('CREATE TABLE IF NOT EXISTS `admin` (
+            if ($pdo->exec('CREATE TABLE IF NOT EXISTS `ad` (
           `id` int(11) NOT NULL AUTO_INCREMENT,
           `email` varchar(255) NOT NULL,
-          `password` varchar(60) NOT NULL,
+          `pass` varchar(60) NOT NULL,
           `role` varchar(2) DEFAULT "AD",
           PRIMARY KEY (`id`),
           UNIQUE KEY `email` (`email`))') !== false) {

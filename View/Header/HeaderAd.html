@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn-icons-png.flaticon.com/512/695/695870.png">
-  <title>KGB Missions Admin</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn-icons-png.flaticon.com/512/695/695870.png">
+    <title>KGB Missions Admin</title>
 </head>
+
 <body>
-<header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-danger">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="../index.php">Accueil</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.php">Accueil</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Sélectionné une base
             </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="./Manager/AdminTable.php">Admin</a></li>
-              <li><a class="dropdown-item" href="./Manager/AgentTable.php">Agent</a></li>
-              <li><a class="dropdown-item" href="./Manager/ContactsTable.php">Contacts</a></li>
-              <li><a class="dropdown-item" href="./Manager/HideTable.php">Planques</a></li>
-              <li><a class="dropdown-item" href="./Manager/MissionTable.php">Mission</a></li>
-              <li><a class="dropdown-item" href="./Manager/TargetTable.php">Cible</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="./Manager/AdminTable.php">Admin</a></li>
+                                <li><a class="dropdown-item" href="./Manager/AgentTable.php">Agent</a></li>
+                                <li><a class="dropdown-item" href="./Manager/ContactsTable.php">Contacts</a></li>
+                                <li><a class="dropdown-item" href="./Manager/HideTable.php">Planques</a></li>
+                                <li><a class="dropdown-item" href="./Manager/MissionTable.php">Mission</a></li>
+                                <li><a class="dropdown-item" href="./Manager/TargetTable.php">Cible</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Sélectionné un Formulaire
             </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="./FormManager/FormAdmin.php">Admin</a></li>
-              <li><a class="dropdown-item" href="./FormManager/FormAgent.php">Agent</a></li>
-              <li><a class="dropdown-item" href="./FormManager/FormContacts.php">Contacts</a></li>
-              <li><a class="dropdown-item" href="./FormManager/FormHide.php">Planques</a></li>
-              <li><a class="dropdown-item" href="./FormManager/FormMission.php">Mission</a></li>
-              <li><a class="dropdown-item" href="./FormManager/FormTarget.php">Cible</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form method="post" action="../Log/Logout.php">
-          <button class="btn btn-warning" type="submit">Déconnexion</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-</header>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="./FormManager/FormAdmin.php">Admin</a></li>
+                                <li><a class="dropdown-item" href="./FormManager/FormAgent.php">Agent</a></li>
+                                <li><a class="dropdown-item" href="./FormManager/FormContacts.php">Contacts</a></li>
+                                <li><a class="dropdown-item" href="./FormManager/FormHide.php">Planques</a></li>
+                                <li><a class="dropdown-item" href="./FormManager/FormMission.php">Mission</a></li>
+                                <li><a class="dropdown-item" href="./FormManager/FormTarget.php">Cible</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form method="post" action="../Log/Logout.php">
+                        <button class="btn btn-warning" type="submit">Déconnexion</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<script src="../Bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../Bootstrap/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
