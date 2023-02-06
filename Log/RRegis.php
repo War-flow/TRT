@@ -12,13 +12,15 @@ if (isset($_SESSION['email'])) {
   $password = $_POST["password"];
 
   $password = password_hash($password, PASSWORD_DEFAULT);
-  $sql = "INSERT INTO candidats (id, email, pass) 
+  $sql = "INSERT INTO recruteur (id, email, pass) 
       VALUES (UUID(), '$email', '$password')";
   $req = $pdo->prepare($sql);
   $req->execute();
-  header( "Location:../View/Update/Role.php" );
 
   $_SESSION['email'] = $email;
+  
+  header( "Location:Role.php" );
+
 }
 ?>
 <!DOCTYPE html>
@@ -35,17 +37,17 @@ if (isset($_SESSION['email'])) {
 <body>
   <div class="box2">
     <div class="box">
-      <form class="form" method="post" action="CRegis.php">
+      <form class="form" method="post" action="RRegis.php">
 
         <div class="center">
           <h1>Inscription</h1>
         </div>
         <div>
 
-          <label for="mail">Votre adresse Email</label>
+          <label for="mail">Mail</label>
           <input type="email" name="email" id="mail" placeholder="Votre Email.." maxlength="255" required autofocus>
 
-          <label for="password">Votre Mot de passe</label>
+          <label for="password">Mot de passe</label>
           <input type="password" name="password" id="password" placeholder="Votre mot de passe.." maxlength="15" minlength="2" required>
 
         </div>

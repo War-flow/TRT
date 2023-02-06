@@ -38,7 +38,7 @@
           if ($pdo->exec('CREATE TABLE IF NOT EXISTS `candidats` (
           `id` int(11) NOT NULL AUTO_INCREMENT,
           `email` varchar(255) NOT NULL,
-          `password` varchar(60) NOT NULL,
+          `pass` varchar(60) NOT NULL,
           `firstname` varchar(255) NOT NULL,
           `lastname` varchar(255) NOT NULL,
           `role` varchar(2) DEFAULT "CA",
@@ -60,18 +60,18 @@
               if ($pdo->exec('CREATE TABLE IF NOT EXISTS `consultant` (
             `id` int(11) NOT NULL AUTO_INCREMENT,
             `email` varchar(255) NOT NULL,
-            `password` varchar(60) NOT NULL,
+            `pass` varchar(60) NOT NULL,
             `role` varchar(2) DEFAULT "CO",
             PRIMARY KEY (`id`),
             UNIQUE KEY `email` (`email`))') !== false) {
 
                 //Création table Recruteur si inexitant
-                if ($pdo->exec('CREATE TABLE IF NOT EXISTS `Recruteur` (
+                if ($pdo->exec('CREATE TABLE IF NOT EXISTS `recruteur` (
                 `id` int(11) NOT NULL AUTO_INCREMENT,
                 `email` varchar(255) NOT NULL,
-                `password` varchar(60) NOT NULL,
-                `company` varchar(255) NOT NULL,
-                `adresse` varchar(255) NOT NULL,
+                `pass` varchar(60) NOT NULL,
+                `company` varchar(255) NULL,
+                `adresse` varchar(255) NULL,
                 `role` varchar(2) DEFAULT "RE",
                 `annonce` int REFERENCES annonce(id),
                 PRIMARY KEY (`id`),

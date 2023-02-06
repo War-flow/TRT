@@ -37,7 +37,7 @@ if (isset($_SESSION['email'])) {
 <body>
   <div class="box2">
     <div class="box">
-      <form method="post" action="CLogin.php">
+      <form method="post" action="Login.php">
   
         <div class="center">
           <h1>Se Connecter</h1>
@@ -53,7 +53,8 @@ if (isset($_SESSION['email'])) {
         <button type="button submit" class="btn btn-info" value="Connexion" id="button " name="submit">Connexion</button>
         </div>
         <div class="center">
-          <a href="CRegis.php">Inscription</a>
+        <a class="btn btn-info" id="button "href="RRegis.php">Inscription Recruteur</a>
+        <a class="btn btn-info" id="button " href="CRegis.php">Inscription Candidats</a>
         </div>
       </form>
     </div>
