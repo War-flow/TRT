@@ -22,7 +22,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     $lastname = htmlspecialchars($_POST['lastname']);
 
     $getId = $_GET['id'];
-
+ 
     $recupData = $pdo->prepare("SELECT * FROM `candidats` WHERE `id` = ? ");
     $recupData->execute(array($getId));
     if ($recupData->rowCount() > 0) {
