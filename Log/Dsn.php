@@ -9,15 +9,14 @@
   try {
     $pdo = new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-      //Création table Cv si inexitant
-      if ($pdo->exec('CREATE TABLE IF NOT EXISTS `cv` (
-                `id` int(11) NOT NULL AUTO_INCREMENT,
-                `file_name` varchar(100) NOT NULL,
-                `type` varchar(100) NOT NULL,
-                `size` varchar(100) NOT NULL,
-                PRIMARY KEY (`id`)
-            )') !== false) {
+        //Création table Annonce si inexitant
+        if ($pdo->exec('CREATE TABLE IF NOT EXISTS `cv` (
+          `id` int(11) NOT NULL AUTO_INCREMENT,
+          `name` varchar(255) NOT NULL,
+          `mine` varchar(255) NOT NULL,
+          `data` blob NOT NULL,
+          PRIMARY KEY (`id`)
+        )') !== false) {
 
         //Création table Annonce si inexitant
         if ($pdo->exec('CREATE TABLE IF NOT EXISTS `annonce` (
@@ -30,7 +29,6 @@
         `salary` decimal(4) NOT NULL,
         `targets` varchar(255) NOT NULL,
         `contrat` varchar(50) NOT NULL,
-        `cv` int REFERENCES cv(id),
         PRIMARY KEY (`id`)
       )') !== false) {
 
@@ -42,8 +40,7 @@
           `firstname` varchar(255) NOT NULL,
           `lastname` varchar(255) NOT NULL,
           `role` varchar(2) DEFAULT "CA",
-          `special` varchar(500) NOT NULL,
-          `cv` int REFERENCES cv(id),
+          `cv` varchar(255) NOT NULL,
           PRIMARY KEY (`id`)
       )') !== false) {
 

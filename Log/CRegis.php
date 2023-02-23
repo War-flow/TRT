@@ -16,9 +16,10 @@ if (isset($_SESSION['email'])) {
       VALUES (UUID(), '$email', '$password')";
   $req = $pdo->prepare($sql);
   $req->execute();
-  header( "Location:../View/Update/Role.php" );
 
   $_SESSION['email'] = $email;
+
+  header( "Location:Role.php" );
 }
 ?>
 <!DOCTYPE html>
@@ -31,7 +32,6 @@ if (isset($_SESSION['email'])) {
   <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css"> 
   <title>Insciption KGB</title>
 </head>
-
 <body>
   <div class="box2">
     <div class="box">
