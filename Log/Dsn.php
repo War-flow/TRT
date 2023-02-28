@@ -22,13 +22,9 @@
         if ($pdo->exec('CREATE TABLE IF NOT EXISTS `annonce` (
         `id` int(11) NOT NULL AUTO_INCREMENT,
         `title` varchar(255) NOT NULL,
-        `adresse` varchar(255) NOT NULL,
         `description` text(500) NOT NULL,
-        `start` time NOT NULL,
-        `end` time NOT NULL,
-        `salary` decimal(4) NOT NULL,
-        `targets` varchar(255) NOT NULL,
-        `contrat` varchar(50) NOT NULL,
+        `hour` varchar(2) NOT NULL,
+        `salary` varchar(6) NOT NULL,
         PRIMARY KEY (`id`)
       )') !== false) {
 

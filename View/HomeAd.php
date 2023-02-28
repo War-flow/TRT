@@ -4,12 +4,12 @@ session_start();
 
 require_once '../Log/Dsn.php';
 require_once 'Header/HeaderAd.html';
-require_once 'DataManager/MissionManager.php';
+require_once 'DataManager/AnManager.php';
 
 
 if (isset($_SESSION['email'])) {
 $page = $_GET['page'] ?? 1 ;
-$manager = new MissionManager($pdo);
+$manager = new AnnonceManager($pdo);
 
 $missions = $manager->getMission($page);
 include 'View.php';
