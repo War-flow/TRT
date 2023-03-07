@@ -11,11 +11,13 @@ if (isset($_POST['submit']))
 {
    $title =  htmlspecialchars($_POST['title']);
    $description = htmlspecialchars($_POST['description']);
+   $country = htmlspecialchars($_POST['country']);
+   $contrat = htmlspecialchars($_POST['contrat']);
    $hour = htmlspecialchars($_POST['hour']);
    $salary = htmlspecialchars($_POST['salary']);
 
-   $sql = "INSERT INTO `annonce`(`title`,`description`, `hour`, `salary`)
-   VALUES ('$title','$description','$hour','$salary')";
+   $sql = "INSERT INTO `annonce`(`title`,`description`, `country`,`contrat`,`hour`, `salary`)
+   VALUES ('$title','$description','$country','$contrat','$hour','$salary')";
 $req = $pdo->prepare($sql);
 $req->execute();
 
@@ -34,9 +36,9 @@ class AnnonceManager {
    public function getAnnonce(int $page): array 
    {
       require_once '../Modele/Annonce.php';
-      $stm = $this->pdo->prepare('SELECT * FROM annonce LIMIT :start, 3');
+      $stm = $this->pdo->prepare('SELECT * FROM annonce LIMIT :start, 5');
       $stm->setFetchMode(PDO::FETCH_CLASS, 'Annonce');
-      $stm->bindValue(':start', 3 * ($page -1), PDO::PARAM_INT);
+      $stm->bindValue(':start', 5 * ($page -1), PDO::PARAM_INT);
       $stm->execute();
 
       return $stm->fetchAll();

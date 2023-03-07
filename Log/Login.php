@@ -37,14 +37,14 @@ if (isset($_SESSION['email'])) {
 <body>
   <div class="box2">
     <div class="box">
-      <form method="post" action="Login.php">
+      <form  class="form" method="post" action="Login.php">
   
         <div class="center">
           <h1>Se Connecter</h1>
         </div>
   
-        <label for="mail">Votre adresse Email</label>
-          <input type="email" name="email" id="mail" placeholder="Votre Email.." maxlength="255" required autofocus>
+        <label for="email">Votre adresse Email</label>
+          <input type="email" name="email" id="email" placeholder="Votre Email.." maxlength="255" required autofocus>
   
         <label for="password">Votre Mot de passe</label>
         <input type="password" name="password" id="password" placeholder="Votre mot de passe.." maxlength="20" required>
@@ -55,6 +55,8 @@ if (isset($_SESSION['email'])) {
         <div class="center">
         <a class="btn btn-info" id="button "href="RRegis.php">Inscription Recruteur</a>
         <a class="btn btn-info" id="button " href="CRegis.php">Inscription Candidats</a>
+        <a class="btn btn-info" id="button " href="ClRegis.php">Inscription Consultant</a>
+        <a class="btn btn-info" id="button " href="AdRegis.php">Inscription Admin</a>
         </div>
       </form>
     </div>

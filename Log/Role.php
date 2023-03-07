@@ -2,6 +2,8 @@
 session_start();
 
 require_once 'Dsn.php';
+
+$id=$_SESSION['email'];
 ?>
 
 <!DOCTYPE html>
@@ -19,15 +21,15 @@ require_once 'Dsn.php';
       <div class="row">
         <div class="col">
           <?phP
-          $recupData = $pdo->query('SELECT * FROM `recruteur`');
-          while ($rec = $recupData->fetch()) { ?>
+          $recupData = $pdo->query("SELECT * FROM `recruteur`WHERE email = '$id'");
+          $rec = $recupData->fetch(); { ?>
             <a class="btn btn-danger" href="../Gestion/Update/UpRecru.php?id=<?= $rec['id']; ?>" role="button">Recruteur</a>
           <?php } ?>
         </div>
         <div class="col">
           <?phP
-          $recupData = $pdo->query('SELECT * FROM `candidats`');
-          while ($rec = $recupData->fetch()) { ?>
+          $recupData = $pdo->query("SELECT * FROM `candidats`WHERE email = '$id'");
+          $rec = $recupData->fetch(); { ?>
             <a class="btn btn-danger" href="../Gestion/Update/UpCandi.php?id=<?= $rec['id']; ?>" role="button">Candidats</a>
           <?php } ?>
         </div>

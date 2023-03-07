@@ -21,6 +21,16 @@
 
                         <label for="description">Description</label>
                         <textarea name="description" class="text" required maxlength="1000"></textarea>
+                        
+                        <label for="country">Commune</label>
+                        <input type="text" name="country" class="text" required maxlength="" minlength="2">
+
+                        <label for="contrat">Type de contrat</label>
+                        <select class="text" name="contrat">
+                          <option value="CDI">CDI</option>
+                          <option value="CDD">CDD</option>
+                          <option value="Intérim">Intérim</option>
+                        </select><br>
 
                         <label for="hour">Heure par semaine</label>
                         <input type="text" name="hour" class="text" required maxlength="2">

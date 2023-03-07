@@ -5,6 +5,8 @@ class Annonce
     private int $id;
     private string $title;
     private string $description;
+    private string $country;
+    private string $contrat;
     private string $hour;
     private string $salary;
 
@@ -27,6 +29,19 @@ class Annonce
     {
         return $this->description;
     }
+
+    public function getCountry(): string
+
+    {
+        return $this->country;
+    }
+
+    public function getContrat(): string
+
+    {
+        return $this->contrat;
+    }
+
 
     public function getHour(): string
 

@@ -11,15 +11,18 @@ if (isset($_SESSION['email'])) {
   $email = $_POST["email"];
   $password = $_POST["password"];
 
+  
+
   $password = password_hash($password, PASSWORD_DEFAULT);
   $sql = "INSERT INTO candidats (id, email, pass) 
       VALUES (UUID(), '$email', '$password')";
   $req = $pdo->prepare($sql);
   $req->execute();
-
+ 
   $_SESSION['email'] = $email;
 
   header( "Location:Role.php" );
+
 }
 ?>
 <!DOCTYPE html>
@@ -33,7 +36,7 @@ if (isset($_SESSION['email'])) {
   <title>Insciption KGB</title>
 </head>
 <body>
-  <div class="box2">
+  <div class="box2"> 
     <div class="box">
       <form class="form" method="post" action="CRegis.php">
 

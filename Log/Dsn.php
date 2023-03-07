@@ -9,7 +9,7 @@
   try {
     $pdo = new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        //Création table Annonce si inexitant
+        //Création table cv si inexitant
         if ($pdo->exec('CREATE TABLE IF NOT EXISTS `cv` (
           `id` int(11) NOT NULL AUTO_INCREMENT,
           `name` varchar(255) NOT NULL,
@@ -23,6 +23,8 @@
         `id` int(11) NOT NULL AUTO_INCREMENT,
         `title` varchar(255) NOT NULL,
         `description` text(500) NOT NULL,
+        `country` varchar(100) NOT NULL,
+        `contrat` varchar(20) NOT NULL,
         `hour` varchar(2) NOT NULL,
         `salary` varchar(6) NOT NULL,
         PRIMARY KEY (`id`)
